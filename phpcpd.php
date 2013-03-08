@@ -49,9 +49,9 @@ ini_set('mbstring.internal_encoding', NULL);
 if (file_exists(__DIR__ . '/vendor/autoload.php')) {
     // dependencies installed via composer
     require __DIR__ . '/vendor/autoload.php';
-} elseif (file_exists(__DIR__ . '/../../autoload.php')) {
+} elseif (file_exists(__DIR__ . '/../../../vendor/autoload.php')) {
     // installed as composer binary in `vendor/bin`
-    require __DIR__ . '/../../autoload.php';
+    require __DIR__ . '/../../../vendor/autoload.php';
 } elseif (strpos('@php_bin@', '@php_bin') === 0) {
     require __DIR__ . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR . 'autoload.php';
 } else {
